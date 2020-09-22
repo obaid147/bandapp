@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<center>
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags}}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+<br>
+<br>
+    <table class="table table-dark text-white table-bordered table-striped table-hover table-sm">
+        <thead>
+            <tr class="bg-danger">
+                <th style="text-align:center;">Title</th>
+                <th style="text-align:center;">Email</th>
+                <th style="text-align:center;">Download</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for song in songs %}
+            <tr>
+                <td align="center">{{ song.song_title }}</td>
+                <td align="center">{{ song.email }}</td>
+                <td align="center">
+                    <a href="{{ song.Mp3.url }}" download="{{ song.Mp3.url }}"
+                       class="btn btn-sm btn-danger">Download</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</center>
+{% endblock %}

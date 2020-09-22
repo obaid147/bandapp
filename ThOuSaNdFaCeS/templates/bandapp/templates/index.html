@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<center>
+<br>
+<br>
+<br>
+    <!--      <source src="{% static 'audios/thousand-faces_kya-sahi-scream-in-peace.ogg' %}" type="audio/ogg">-->
+    <!--      <source src="{% static 'audios/thousand-faces_kya-sahi-scream-in-peace.mp3' %}" type="audio/mpeg">-->
+    <audio controls  controlsList="nodownload">
+      <source src="{% static 'audios/thousand-faces_dafan.ogg' %}" type="audio/ogg">
+      <source src="{% static 'audios/thousand-faces_dafan.mp3' %}" type="audio/mpeg">
+            Cannot support audio.
+    </audio>
+</center>
+{% endblock %}

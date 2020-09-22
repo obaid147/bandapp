@@ -1,0 +1,49 @@
+.bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    }
+
+.shadow{
+    color: white;
+    font: bold 32px Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px #c0ab8e,
+                         2px 2px #c0ab8e,
+                         3px 3px #c0ab8e;
+    }
+.shadow:hover{
+    position: relative;
+    top: -1px;
+    left: -1px;
+    text-shadow: 1px 1px #c0ab8e,
+                         4px 4px #c0ab8e,
+                         5px 5px #c0ab8e,
+                         6px 6px #c0ab8e;
+    }
+
+.btn{
+    opacity: 0.8;
+    border: none;
+    color: white;
+    padding: 12px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+.btn:hover{
+    opacity: 1;
+    }
+
+@import url('http://weloveiconfonts.com/api/?family=entypo');
+
+.wrap{
+  float:right;
+  margin-top: -150px;
+}
+.social {
+    display: inline-block;
+    border-radius: 100%;
+}
