@@ -6,3 +6,7 @@ class Music(models.Model):
     email = models.EmailField(max_length=254, default=None)
     Mp3 = models.FileField(upload_to='fans_files/mp3/', max_length=100,
                            help_text='Upload mp3 Format')
+
+    def delete(self, *args, **kwargs):
+        self.Mp3.delete()
+        super().delete(*args, **kwargs)

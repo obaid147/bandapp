@@ -10,4 +10,5 @@ urlpatterns = [
     path('videos', views.videos, name="videos"),
     path('about', views.about, name="about"),
     path('downloads', views.download, name='downloads'),
+    path('<int:pk>', views.delete, name='delete'),
 ]

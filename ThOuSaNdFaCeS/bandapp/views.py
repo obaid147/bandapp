@@ -1,3 +1,5 @@
+import sys
+
 from django.shortcuts import render, redirect
 from gtts import gTTS
 from .forms import MusicForm
@@ -60,6 +62,13 @@ def download(request):
         'songs': songs
     }
     return render(request, 'downloads.html', context)
+
+
+def delete(request, pk):
+    if request.method == 'POST':
+        songs = Music.objects.get(pk=pk)
+        songs.delete()
+    return redirect('downloads')
 
 
 def videos(request):
